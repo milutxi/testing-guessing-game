@@ -14,6 +14,6 @@ describe("Color to guess component renders and has the correct color", () => {
     render(<ColorToGuess correctColor={mockCorrectColor} />);
     const colorToGuess = screen.getByTestId(/color-to-guess/i);
 
-    expect(colorToGuess).toHaveStyle(`background-color: ${mockCorrectColor};`);
+    expect(colorToGuess).toHaveStyle(`background-color: #${mockCorrectColor};`);
   });
 });

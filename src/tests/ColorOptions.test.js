@@ -3,7 +3,7 @@ import ColorOptions from "../components/ColorOptions";
 
 describe("The different color options renders as expected", () => {
   const mockColors = ["ABD123", "3FA12A", "DAF378"];
-  test("Component To exist in the document", () => {
+  test("So that component exists in the document", () => {
     render(<ColorOptions colors={mockColors} />);
 
     const colorOptions = screen.getByTestId("color-options");

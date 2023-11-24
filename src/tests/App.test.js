@@ -35,8 +35,7 @@ describe("Render app and game functionality works as expected", () => {
   test("If wrong guess is made render a wrong guess component", () => {
     render(<App />);
     const buttons = screen.getAllByRole("button");
-    const correctColorInRGB =
-      screen.getByTestId(/color-to-guess/i).style.backgroundColor;
+    const correctColorInRGB = screen.getByTestId(/color-to-guess/i).style.backgroundColor;
     // the function below just converts correctColor back to HEX format because Javascript automatically converted the HEX to rgb...
     const correctColor = convertBackToHex(correctColorInRGB);
     let wrongGuess = screen.queryByTestId("wrong-guess");
@@ -56,12 +55,9 @@ describe("Render app and game functionality works as expected", () => {
   test("If wrong guess is made change correct guesses in a row to 0", () => {
     render(<App />);
     const buttons = screen.getAllByRole("button");
-    const correctColorInRGB =
-      screen.getByTestId(/color-to-guess/i).style.backgroundColor;
+    const correctColorInRGB = screen.getByTestId(/color-to-guess/i).style.backgroundColor;
     const correctColor = convertBackToHex(correctColorInRGB);
-    const correctGuessesInARowValue = screen.getByTestId(
-      "correct-guesses-in-a-row-value",
-    );
+    const correctGuessesInARowValue = screen.getByTestId("correct-guesses-in-a-row-value");
 
     buttons.forEach((button) => {
       if (button.textContent !== correctColor) {
@@ -71,15 +67,12 @@ describe("Render app and game functionality works as expected", () => {
     expect(correctGuessesInARowValue.textContent).toEqual("0");
   });
 
-  test("If user makes correct guess that correctGuessesInARow value increases by 1", () => {
+  test("If user makes correct guess increase correct guesses in a row value by 1", () => {
     render(<App />);
     let buttons = screen.getAllByRole("button");
-    let correctColorInRGB =
-      screen.getByTestId(/color-to-guess/i).style.backgroundColor;
+    let correctColorInRGB = screen.getByTestId(/color-to-guess/i).style.backgroundColor;
     let correctColor = convertBackToHex(correctColorInRGB);
-    let correctGuessesInARowValue = screen.getByTestId(
-      "correct-guesses-in-a-row-value",
-    );
+    let correctGuessesInARowValue = screen.getByTestId("correct-guesses-in-a-row-value");
 
     expect(correctGuessesInARowValue.textContent).toEqual("0");
 
@@ -99,17 +92,14 @@ describe("Render app and game functionality works as expected", () => {
         fireEvent.click(button);
       }
     });
-    correctGuessesInARowValue = screen.getByTestId(
-      "correct-guesses-in-a-row-value",
-    );
+    correctGuessesInARowValue = screen.getByTestId("correct-guesses-in-a-row-value");
     expect(correctGuessesInARowValue.textContent).toEqual("2");
   });
 
   test("If user makes correct guess generate new hex colors for each button", () => {
     render(<App />);
     let buttons = screen.getAllByRole("button");
-    let correctColorInRGB =
-      screen.getByTestId(/color-to-guess/i).style.backgroundColor;
+    let correctColorInRGB = screen.getByTestId(/color-to-guess/i).style.backgroundColor;
     let correctColor = convertBackToHex(correctColorInRGB);
 
     buttons.forEach((button) => {
@@ -127,8 +117,7 @@ describe("Render app and game functionality works as expected", () => {
   test("If user makes correct guess generate a new color for user to guess", () => {
     render(<App />);
     const buttons = screen.getAllByRole("button");
-    const correctColorInRGB =
-      screen.getByTestId(/color-to-guess/i).style.backgroundColor;
+    const correctColorInRGB = screen.getByTestId(/color-to-guess/i).style.backgroundColor;
     const correctColor = convertBackToHex(correctColorInRGB);
 
     buttons.forEach((button) => {
@@ -137,8 +126,7 @@ describe("Render app and game functionality works as expected", () => {
       }
     });
 
-    const newCorrectColorInRGB =
-      screen.getByTestId(/color-to-guess/i).style.backgroundColor;
+    const newCorrectColorInRGB = screen.getByTestId(/color-to-guess/i).style.backgroundColor;
 
     const newCorrectColor = convertBackToHex(newCorrectColorInRGB);
 

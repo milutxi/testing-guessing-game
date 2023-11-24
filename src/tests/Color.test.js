@@ -17,7 +17,7 @@ describe("Each button works as expected and has correct text", () => {
 
     expect(button.textContent.length).toEqual(6);
   });
-  test("Buttons text content should equal the color that is passed in as a prop", () => {
+  test("Buttons text content should equal the color that is passed in", () => {
     render(<Color color={mockColor} />);
 
     const button = screen.getByRole("button", { name: mockColor });
