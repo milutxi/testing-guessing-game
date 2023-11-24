@@ -36,13 +36,17 @@
 ## SCREENSHOTS
 
 ### Initial game
-![image](https://github.com/maxhaggmancmedu/testing-guessing-game/assets/116894648/13d8ff50-63f6-438a-bf53-fbe3581078c3)
+![image](https://github.com/maxhaggmancmedu/testing-guessing-game/assets/116894648/616e445c-5f22-4042-87d5-99523a67d7cd)
 
-### User correct guess
-![image](https://github.com/maxhaggmancmedu/testing-guessing-game/assets/116894648/c8f38df6-5569-42bc-b634-ae928ca4b04a)
+
 
 ### User incorrect guess
-![image](https://github.com/maxhaggmancmedu/testing-guessing-game/assets/116894648/f5ebdecd-66af-4391-8070-75570f636bca)
+![image](https://github.com/maxhaggmancmedu/testing-guessing-game/assets/116894648/dd836e29-553c-4b0c-93ad-ac2126da682c)
+
+
+### User correct guess
+![image](https://github.com/maxhaggmancmedu/testing-guessing-game/assets/116894648/ba9518e6-65ac-4295-a06a-4f045f67647d)
+
 
 
 
