@@ -98,9 +98,9 @@ describe("Render app and game functionality works as expected", () => {
 
   test("If user makes correct guess generate new hex colors for each button", () => {
     render(<App />);
-    let buttons = screen.getAllByRole("button");
-    let correctColorInRGB = screen.getByTestId(/color-to-guess/i).style.backgroundColor;
-    let correctColor = convertBackToHex(correctColorInRGB);
+    const buttons = screen.getAllByRole("button");
+    const correctColorInRGB = screen.getByTestId(/color-to-guess/i).style.backgroundColor;
+    const correctColor = convertBackToHex(correctColorInRGB);
 
     buttons.forEach((button) => {
       if (button.textContent === correctColor) {
