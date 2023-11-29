@@ -1,5 +1,5 @@
-// import { render, screen } from "@testing-library/react";
-// import Color from ".";
+import { render, screen } from "@testing-library/react";
+import Color from ".";
 
 // describe("Each button works as expected and has correct text", () => {
 //   const mockColor = "ABD232";
@@ -32,3 +32,4 @@
 //     expect(/^[A-F0-9]+$/.test(button.textContent)).toBe(true);
 //   });
 // });
+
