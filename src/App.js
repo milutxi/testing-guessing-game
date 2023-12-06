@@ -6,12 +6,10 @@ import ColorToGuess from './components/ColorToGuess';
 import ColorOptions from './components/ColorOptions';
 import WrongGuess from './components/WrongGuess';
 
-
 import './App.css';
 
-
-
 function App() {
+    
     const colors = [    
         {
             name: "hot pink",
@@ -75,12 +73,6 @@ function App() {
         console.log(correctColor)
     }
 
-    // useEffect( () => {
-    //     chooseColors(colors);
-    //      // const xxx = async () => 
-    //  }, []
-    //  )
-
     const fetchData = async () => {
         
         await chooseColors(colors);
@@ -107,7 +99,7 @@ function App() {
             setCorrectGuessesInARow(0)
            
         }
-        //chooseColors();  //reset game for nex round
+       
         fetchData();
     }
 
@@ -115,12 +107,9 @@ function App() {
 
         <div className="App">
             <Header />
-            
             <CorrectGuessesInARow correctGuessesInARow={correctGuessesInARow}/>
-
-            <ColorToGuess correctColor ={correctColor} />
-            
-            <ColorOptions colors ={chosenColors} guessColorClick={guessColorClick}  /> 
+            <ColorToGuess correctColor ={correctColor} />  
+            <ColorOptions colors ={chosenColors} guessColorClick={guessColorClick} /> 
             {wrongGuess &&
                 <WrongGuess />
             }
