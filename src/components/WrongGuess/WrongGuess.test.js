@@ -7,4 +7,3 @@
 
 //   expect(wrongGuess).not.toBeInTheDocument();
 // });
-
