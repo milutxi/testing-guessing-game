@@ -4,8 +4,8 @@ const ColorOptions = ({colors, guessColorClick}) => {
        return(
         <div data-testid="color-options">
             {colors && (
-            colors.map((colors, index) =>  
-            <Color color={colors} key={index} guessColorClick={guessColorClick} /> )
+            colors.map((color, index) =>  
+            <Color color={color} key={index} guessColorClick={guessColorClick} /> )
             )}
         </div>
     )

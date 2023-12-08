@@ -3,8 +3,8 @@ const Color = ({ color, guessColorClick }) => {
     
     return (
         <div>
-            <button onClick={() => guessColorClick(color.code)}>
-                {color.code}
+            <button onClick={() => guessColorClick(color)}>
+                {color}
             </button> 
         </div>
     )

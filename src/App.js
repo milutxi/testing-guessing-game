@@ -10,77 +10,72 @@ import './App.css';
 
 function App() {
     
-    const colors = [    
-        {
-            name: "hot pink",
-            code: "FF69B4"
-        },
-        {
-            name: "firebrick",
-            code: "B22222"
-        },
-        {
-            name: "light coral",
-            code: "F08080"
-        },
-        {
-            name: "orange",
-            code: "FFA500"
-        },
-        {
-            name: "pale golden rod",
-            code: "EEE8AA"
-        },
-        {
-            name: "dark olive green",
-            code: "556B2F"
-        },
-        {
-            name: "aqua marine",
-            code: "7FFFD4"
-        },
-        {
-            name: "medium orchid",
-            code: "BA55D3"
-        },
-        {
-            name: "royal blue",
-            code: "4169E1"
-        }
-        ];
+    // const colors = [    
+    //     {
+    //         name: "hot pink",
+    //         code: "FF69B4"
+    //     },
+    //     {
+    //         name: "firebrick",
+    //         code: "B22222"
+    //     },
+    //     {
+    //         name: "light coral",
+    //         code: "F08080"
+    //     },
+    //     {
+    //         name: "orange",
+    //         code: "FFA500"
+    //     },
+    //     {
+    //         name: "pale golden rod",
+    //         code: "EEE8AA"
+    //     },
+    //     {
+    //         name: "dark olive green",
+    //         code: "556B2F"
+    //     },
+    //     {
+    //         name: "aqua marine",
+    //         code: "7FFFD4"
+    //     },
+    //     {
+    //         name: "medium orchid",
+    //         code: "BA55D3"
+    //     },
+    //     {
+    //         name: "royal blue",
+    //         code: "4169E1"
+    //     }
+    //     ];
 
-    const[chosenColors, setChosenColors]= useState(colors);
+    const generateRandomHexColor = () => {
+        const randomColors = Array.from({length: 3}, ()=> {
+
+            const randomColorNumber = Math.floor(Math.random()*16777215);
+            const hexColor = randomColorNumber.toString(16);
+            return ("000000" + hexColor).slice(-6).toUpperCase();
+        })
+            return randomColors;
+    };
+
+    console.log(generateRandomHexColor());
+
+    const[chosenColors, setChosenColors]= useState([]);
     const[wrongGuess, setWrongGuess] = useState(false);
     const [correctColor, setCorrectColor] = useState();
     const [correctGuessesInARow, setCorrectGuessesInARow] = useState(0);
 
-    const chooseColors = (colors) => {
-        let pickColors = [];
-        for (let i = 0; i < 3; i++) {
-            let newColor;
-            do {
-                let randomNumber = Math.floor(Math.random() * colors.length);
-                newColor = colors[randomNumber];
-            } while (pickColors.includes(newColor))
-            pickColors.push(newColor);
-        }
-        setChosenColors(pickColors)
-            
-        let randomColor = Math.floor(Math.random() * pickColors.length);
-            setCorrectColor(pickColors[randomColor].code);
-        
-        console.log(pickColors)
-        console.log(correctColor)
+    const startGame = () => {
+        const randomColors = generateRandomHexColor();
+        setChosenColors(randomColors);
+
+        const randomColorIndex = Math.floor(Math.random()*randomColors.length);
+        setCorrectColor(randomColors[randomColorIndex]);
     }
 
-    const fetchData = async () => {
-        
-        await chooseColors(colors);
-        console.log(correctColor);
-    };
-
     useEffect(() => {
-        fetchData();
+        startGame();
     },[]);
 
     const guessColorClick = (guessedColor) => {
@@ -100,8 +95,8 @@ function App() {
            
         }
        
-        fetchData();
-    }
+        startGame();
+    };
 
     return (
 
