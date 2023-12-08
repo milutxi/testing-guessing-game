@@ -1,20 +1,20 @@
-//  import { render, screen } from "@testing-library/react";
-//  import ColorOptions from ".";
+ import { render, screen } from "@testing-library/react";
+ import ColorOptions from ".";
 
-//  describe("The different color options renders as expected", () => {
-//    const mockColors = ["ABD123", "3FA12A", "DAF378"];
-//    test("So that component exists in the document", () => {
-//      render(<ColorOptions colors={mockColors} />);
+ describe("The different color options renders as expected", () => {
+   const mockColors = ["ABD123", "3FA12A", "DAF378"];
+   test("So that component exists in the document", () => {
+     render(<ColorOptions colors={mockColors} />);
      
-//      const colorOptions = screen.getByTestId("color-options");
+     const colorOptions = screen.getByTestId("color-options");
 
-//      expect(colorOptions).toBeInTheDocument();
-//   });
-//    test("That there are 3 options to click on", () => {
-//      render(<ColorOptions colors={mockColors} />);
+     expect(colorOptions).toBeInTheDocument();
+  });
+   test("That there are 3 options to click on", () => {
+     render(<ColorOptions colors={mockColors} />);
 
-//      const buttons = screen.getAllByRole("button");
+     const buttons = screen.getAllByRole("button");
 
-//      expect(buttons.length).toEqual(3);
-//    });
-//  });
+     expect(buttons.length).toEqual(3);
+   });
+ });

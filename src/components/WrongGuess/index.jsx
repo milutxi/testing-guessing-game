@@ -1,6 +1,6 @@
 const WrongGuess = () => {
     return (
-        <div>
+        <div data-testid='wrong-guess'>
             <p>Wrong guess</p>
         </div>
     )

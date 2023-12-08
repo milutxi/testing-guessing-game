@@ -100,9 +100,9 @@ function App() {
 
     return (
 
-        <div className="App">
+        <div className="App" data-testid='app'>
             <Header />
-            <CorrectGuessesInARow correctGuessesInARow={correctGuessesInARow}/>
+            <CorrectGuessesInARow correctGuessesInARow={correctGuessesInARow} />
             <ColorToGuess correctColor ={correctColor} />  
             <ColorOptions colors ={chosenColors} guessColorClick={guessColorClick} /> 
             {wrongGuess &&
