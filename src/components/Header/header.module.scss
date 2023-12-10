@@ -1,0 +1,11 @@
+@import '../../App.scss';
+
+.header {
+    margin: auto;
+
+    &__title {
+        text-align: center;
+        font-family: $font-space-grotesk;
+    }
+    
+} 

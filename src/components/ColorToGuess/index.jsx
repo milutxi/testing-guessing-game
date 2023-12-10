@@ -1,10 +1,17 @@
+import styles from './colorToGuess.module.scss';
+
 const ColorToGuess = ({correctColor}) => {
     return (
-        <div
-            data-testid='color-to-guess'
-            style={{backgroundColor: correctColor ? `#${correctColor}` : '#FFFFFF', width: "200px", height: "200px", border: "2px solid black"}}>
+        <div className={styles.guess}>
+            <div className={styles["guess__text"]}>
               <p>Which color is this?</p> 
               <p>Choose a button to guess it</p>
+            </div>
+            <div
+                data-testid='color-to-guess'
+                style={{backgroundColor: correctColor ? `#${correctColor}` : '#FFFFFF'}}
+                className={styles["guess__color"]}>
+            </div>
         </div>
     )
 }

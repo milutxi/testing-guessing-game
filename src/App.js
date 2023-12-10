@@ -6,7 +6,7 @@ import ColorToGuess from './components/ColorToGuess';
 import ColorOptions from './components/ColorOptions';
 import WrongGuess from './components/WrongGuess';
 
-import './App.css';
+import './App.scss';
 
 function App() {
     

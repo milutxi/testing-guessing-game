@@ -1,0 +1,9 @@
+@import '../../App.scss';
+
+.colors {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 5px;
+    justify-content: center;
+}

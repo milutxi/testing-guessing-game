@@ -1,0 +1,19 @@
+@import '../../App.scss';
+
+.guess {
+    padding: $indent__m;
+    margin: auto;
+    @include flexbox;
+
+    &__color {
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    &__text {
+        font-family: $font-shadows-into;
+        font-weight: 700;
+    }
+} 

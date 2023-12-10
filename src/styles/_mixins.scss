@@ -1,0 +1,26 @@
+@mixin button-style {
+    border: {
+        radius: 50%;
+        style: solid;
+        color: #1a4d6e;   
+    }
+    cursor: pointer;
+    padding: $indent__s;
+    background-color: #acdbfa;
+    height: 70px;
+    width: 70px;
+
+    &:hover{
+        color: #acdbfa;
+        background-color: #1a4d6e;
+    }
+}
+
+@mixin flexbox {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
