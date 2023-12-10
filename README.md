@@ -1,4 +1,13 @@
-# Color guessing game  
+# Creation of the game
+
+This game has been initialy created by my school collega, Max, the real author of this game. 
+This repository is the result of following his test file and other hints which can be found in the README file from his project. ( Which you can see also above ).
+
+## Improvements
+
+I do consider his game and test was really good and no immprovements need to be done, but I add a right guess component with its style and test just for adding more info to the game.
+
+## Color guessing game (By Max)  
  
 
     Components: App: 
