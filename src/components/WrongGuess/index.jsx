@@ -4,7 +4,7 @@ const WrongGuess = () => {
     return (
         <div data-testid='wrong-guess'
         className={styles.wrong}>
-            <h3 className={styles["wrong__text"]}>Wrong guess</h3>
+            <p className={styles["wrong__text"]}>Wrong guess</p>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import CorrectGuessesInARow from './components/CorrectGuessesInARow';
 import ColorToGuess from './components/ColorToGuess';
 import ColorOptions from './components/ColorOptions';
 import WrongGuess from './components/WrongGuess';
+import RightGuess from './components/RightGuess';
 
 import './App.scss';
 
@@ -65,6 +66,7 @@ function App() {
     const[wrongGuess, setWrongGuess] = useState(false);
     const [correctColor, setCorrectColor] = useState();
     const [correctGuessesInARow, setCorrectGuessesInARow] = useState(0);
+    const[rightGuess, setRightGuess] = useState(false);
 
     const startGame = () => {
         const randomColors = generateRandomHexColor();
@@ -84,6 +86,7 @@ function App() {
             setWrongGuess(false);
             const rightOne = correctGuessesInARow + 1
             setCorrectGuessesInARow(rightOne);
+            setRightGuess(true);
 
             if (rightOne === 3) {
                 console.log("Congratulations 3 in a row!!!");
@@ -91,7 +94,8 @@ function App() {
 
         } else {
             setWrongGuess(true);
-            setCorrectGuessesInARow(0)
+            setCorrectGuessesInARow(0);
+            setRightGuess(false);
            
         }
        
@@ -107,6 +111,9 @@ function App() {
             <ColorOptions colors ={chosenColors} guessColorClick={guessColorClick} /> 
             {wrongGuess &&
                 <WrongGuess />
+            }
+            {rightGuess &&
+                <RightGuess />
             }
         </div>
     )
